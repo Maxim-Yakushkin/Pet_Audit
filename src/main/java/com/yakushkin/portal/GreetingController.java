@@ -1,0 +1,31 @@
+package com.yakushkin.portal;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/v1")
+public class GreetingController {
+
+    @PostMapping(
+            value = "/hello",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public String hello(@RequestBody(required = false) GreetingRequestBody requestBody) {
+
+        if (requestBody == null) {
+            return """
+                    Please provide body as JSON
+                    Example
+                    {
+                        "name":"Jack"
+                    }
+                    """;
+        }
+
+        return "Hello, " + requestBody.getName();
+    }
+}
