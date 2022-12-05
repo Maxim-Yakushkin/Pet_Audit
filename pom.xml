@@ -6,7 +6,12 @@
 
     <groupId>com.yakushkin</groupId>
     <artifactId>petauditing</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>workspace_portal</module>
+    </modules>
 
     <properties>
         <java.version>18</java.version>
@@ -42,12 +47,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <!--        Spring Boot Web-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!--        Spring Boot Test-->
