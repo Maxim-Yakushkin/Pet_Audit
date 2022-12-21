@@ -17,6 +17,11 @@ public class TestDataGeneratorPet {
         printInsertSql(10);
     }
 
+    /**
+     * The method generates an SQL script with random data for the database
+     *
+     * @param countEntity count of necessary entities
+     */
     public void printInsertSql(Integer countEntity) {
 
         StringBuilder stringBuilder = new StringBuilder();
