@@ -1,12 +1,12 @@
 package com.yakushkin.portal.response.pet;
 
-import com.yakushkin.portal.entity.PetEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+// TODO: 22.12.2022 Adjusting is needed
 @Component
 @Data
 @NoArgsConstructor
@@ -14,6 +14,6 @@ import org.springframework.stereotype.Component;
 @Builder
 public class PetResponseBody {
 
-    private PetEntity data;
+    //    private PetEntity data;
     private String message;
 }

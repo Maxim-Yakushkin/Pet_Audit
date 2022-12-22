@@ -1,29 +1,20 @@
 package com.yakushkin.portal.service.pet;
 
-import com.yakushkin.portal.entity.PetEntity;
-import com.yakushkin.portal.repository.PetRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-
+// TODO: 22.12.2022 Create All CRUD operations
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class PetService {
 
-    private final PetRepository petRepository;
+    private final RestTemplate restTemplate;
 
-    public List<PetEntity> findAll() {
-        return petRepository.findAll();
-    }
-
-    public PetEntity findById(Long petId) {
-        return petRepository.findById(petId).orElse(null);
-    }
-
-    public PetEntity save(PetEntity pet) {
-        return petRepository.saveAndFlush(pet);
+    public String findAll() {
+        return restTemplate.getForObject(
+                "http://localhost:8082/api/v1/pets",
+                String.class
+        );
     }
 }
