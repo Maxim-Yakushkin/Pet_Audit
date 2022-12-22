@@ -1,11 +1,13 @@
 package com.yakushkin.storage.response.pet;
 
-import com.yakushkin.storage.entity.PetEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+
+import java.util.Optional;
 
 @Component
 @Data
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Component;
 @Builder
 public class PetResponseBody {
 
-    private PetEntity data;
+    private Optional<?> data;
     private String message;
+    private HttpStatus status;
 }

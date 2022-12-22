@@ -14,4 +14,14 @@ public class PetMapper {
                 .typeOfAccommodation(petRequestBody.getTypeOfAccommodation())
                 .build();
     }
+
+    public static PetEntity mergeRequestBodyToEntity(PetRequestBody from, PetEntity to) {
+        to.setName(from.getName());
+        to.setBirthday(from.getBirthday());
+        to.setPetType(from.getPetType());
+        to.setChipped(from.getChipped());
+        to.setTypeOfAccommodation(from.getTypeOfAccommodation());
+
+        return to;
+    }
 }

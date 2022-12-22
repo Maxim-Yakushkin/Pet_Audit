@@ -4,9 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
-// TODO: 22.12.2022 Adjusting is needed
+import java.util.Optional;
+
 @Component
 @Data
 @NoArgsConstructor
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Component;
 @Builder
 public class PetResponseBody {
 
-    //    private PetEntity data;
+    private Optional<?> data;
     private String message;
+    private HttpStatus status;
 }
