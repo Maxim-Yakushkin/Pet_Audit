@@ -17,8 +17,7 @@ public class PortalController {
 
     @GetMapping(
             value = "/pets",
-            produces = MediaType.APPLICATION_JSON_VALUE
-    )
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public String findAll() {
         return petService.findAll();
     }
