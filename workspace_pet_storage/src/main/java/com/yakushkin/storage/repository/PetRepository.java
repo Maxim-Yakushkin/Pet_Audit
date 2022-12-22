@@ -1,6 +1,6 @@
-package com.yakushkin.portal.repository;
+package com.yakushkin.storage.repository;
 
-import com.yakushkin.portal.entity.PetEntity;
+import com.yakushkin.storage.entity.PetEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

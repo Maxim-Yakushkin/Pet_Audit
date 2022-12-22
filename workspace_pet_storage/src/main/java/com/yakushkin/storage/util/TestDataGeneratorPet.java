@@ -1,8 +1,8 @@
-package com.yakushkin.portal.util;
+package com.yakushkin.storage.util;
 
 import com.github.javafaker.Faker;
-import com.yakushkin.portal.entity.enumiration.AccommodationType;
-import com.yakushkin.portal.entity.enumiration.PetType;
+import com.yakushkin.storage.entity.enumiration.AccommodationType;
+import com.yakushkin.storage.entity.enumiration.PetType;
 import lombok.experimental.UtilityClass;
 
 import java.time.LocalDate;

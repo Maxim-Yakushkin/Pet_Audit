@@ -1,7 +1,7 @@
-package com.yakushkin.portal.entity;
+package com.yakushkin.storage.entity;
 
-import com.yakushkin.portal.entity.enumiration.AccommodationType;
-import com.yakushkin.portal.entity.enumiration.PetType;
+import com.yakushkin.storage.entity.enumiration.AccommodationType;
+import com.yakushkin.storage.entity.enumiration.PetType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

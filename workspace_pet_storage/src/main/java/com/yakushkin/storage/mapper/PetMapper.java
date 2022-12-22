@@ -1,7 +1,7 @@
-package com.yakushkin.portal.mapper;
+package com.yakushkin.storage.mapper;
 
-import com.yakushkin.portal.entity.PetEntity;
-import com.yakushkin.portal.request.pet.PetRequestBody;
+import com.yakushkin.storage.entity.PetEntity;
+import com.yakushkin.storage.request.pet.PetRequestBody;
 
 public class PetMapper {
 

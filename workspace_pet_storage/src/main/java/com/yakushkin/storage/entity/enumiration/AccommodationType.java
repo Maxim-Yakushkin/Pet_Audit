@@ -1,4 +1,4 @@
-package com.yakushkin.portal.entity.enumiration;
+package com.yakushkin.storage.entity.enumiration;
 
 public enum AccommodationType {
 
