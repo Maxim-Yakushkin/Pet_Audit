@@ -3,7 +3,7 @@ package com.yakushkin.storage.service.pet;
 import com.yakushkin.storage.entity.PetEntity;
 import com.yakushkin.storage.mapper.PetMapper;
 import com.yakushkin.storage.repository.PetRepository;
-import com.yakushkin.storage.request.pet.PetRequestBody;
+import com.yakushkin.storage.http.rest.request.pet.PetRequestBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

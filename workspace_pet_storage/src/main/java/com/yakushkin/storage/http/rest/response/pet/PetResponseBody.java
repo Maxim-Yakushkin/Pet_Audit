@@ -1,4 +1,4 @@
-package com.yakushkin.storage.response.pet;
+package com.yakushkin.storage.http.rest.response.pet;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

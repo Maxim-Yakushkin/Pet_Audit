@@ -1,4 +1,4 @@
-package com.yakushkin.storage.request.pet;
+package com.yakushkin.storage.http.rest.request.pet;
 
 import com.yakushkin.storage.entity.enumiration.AccommodationType;
 import com.yakushkin.storage.entity.enumiration.PetType;

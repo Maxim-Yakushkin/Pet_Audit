@@ -2,8 +2,8 @@ package com.yakushkin.storage.http.rest.pet;
 
 import com.yakushkin.storage.entity.PetEntity;
 import com.yakushkin.storage.mapper.PetMapper;
-import com.yakushkin.storage.request.pet.PetRequestBody;
-import com.yakushkin.storage.response.pet.PetResponseBody;
+import com.yakushkin.storage.http.rest.request.pet.PetRequestBody;
+import com.yakushkin.storage.http.rest.response.pet.PetResponseBody;
 import com.yakushkin.storage.service.pet.PetService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,7 +24,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/api/v1/pets", produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
-public class PetRestController {
+public class PetStorageRestController {
 
     private final PetService petService;
 
