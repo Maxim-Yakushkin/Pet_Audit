@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="workspace_portal" />
+        <module name="workspace_domestic" />
         <module name="workspace_pet_storage" />
       </profile>
     </annotationProcessing>

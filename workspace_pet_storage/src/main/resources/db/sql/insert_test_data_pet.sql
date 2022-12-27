@@ -1,4 +1,4 @@
-INSERT INTO pet (name, birthday, pet_type, chipped, type_of_accommodation)
+INSERT INTO pet_storage.public.pet (name, birthday, pet_type, chipped, type_of_accommodation)
 VALUES ('Marj Oram', '2018-07-07', 'PARROT', 'true', 'DOMESTIC'),
        ('Abbie Birthday', '2015-11-19', 'HAMSTER', 'false', 'HOMELESS'),
        ('Frank N. Beans', '2012-07-21', 'HAMSTER', 'false', 'HOMELESS'),

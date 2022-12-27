@@ -12,6 +12,7 @@
     <modules>
         <module>workspace_portal</module>
         <module>workspace_pet_storage</module>
+        <module>workspace_domestic</module>
     </modules>
 
     <properties>

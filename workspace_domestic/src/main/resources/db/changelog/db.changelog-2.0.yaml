@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: rename--column-in-domestic-pet-table
+      author: domestic
+      changes:
+        - renameColumn:
+            tableName: domestic_pet
+            newColumnName: isDomestic
+            oldColumnName: type_of_accommodation
