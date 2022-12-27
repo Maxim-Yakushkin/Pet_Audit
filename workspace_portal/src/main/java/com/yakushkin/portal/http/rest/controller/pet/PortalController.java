@@ -1,7 +1,7 @@
-package com.yakushkin.portal.controller.pet;
+package com.yakushkin.portal.http.rest.controller.pet;
 
-import com.yakushkin.portal.request.pet.PetRequestBody;
-import com.yakushkin.portal.response.pet.PetResponseBody;
+import com.yakushkin.portal.http.rest.request.pet.PetRequestBody;
+import com.yakushkin.portal.http.rest.response.pet.PetResponseBody;
 import com.yakushkin.portal.service.rest.pet.PetRestService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-// TODO: 22.12.2022 CRUD operations
 @RestController
 @RequestMapping(value = "/api/v1/portal", produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor

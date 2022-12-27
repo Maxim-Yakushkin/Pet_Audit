@@ -1,7 +1,8 @@
 package com.yakushkin.portal.service.rest.pet;
 
-import com.yakushkin.portal.request.pet.PetRequestBody;
-import com.yakushkin.portal.response.pet.PetResponseBody;
+import com.yakushkin.portal.http.rest.endpoints.pet.PetEndpoint;
+import com.yakushkin.portal.http.rest.request.pet.PetRequestBody;
+import com.yakushkin.portal.http.rest.response.pet.PetResponseBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
@@ -14,17 +15,18 @@ import org.springframework.web.client.RestTemplate;
 public class PetRestService {
 
     private final RestTemplate restTemplate;
+    private final PetEndpoint petEndpoint;
 
     public PetResponseBody findAll() {
         return restTemplate.getForObject(
-                "http://localhost:8082/api/v1/pets",
+                petEndpoint.endpointGetAll,
                 PetResponseBody.class
         );
     }
 
     public PetResponseBody findById(Long petId) {
         return restTemplate.getForObject(
-                "http://localhost:8082/api/v1/pets/{id}",
+                petEndpoint.endpointGetById,
                 PetResponseBody.class,
                 petId
         );
@@ -32,7 +34,7 @@ public class PetRestService {
 
     public PetResponseBody save(PetRequestBody requestBody) {
         return restTemplate.postForObject(
-                "http://localhost:8082/api/v1/pets/registration",
+                petEndpoint.endpointRegistration,
                 requestBody,
                 PetResponseBody.class
         );
@@ -40,7 +42,7 @@ public class PetRestService {
 
     public PetResponseBody update(PetRequestBody requestBody, Long petId) {
         RequestEntity<PetRequestBody> request = RequestEntity
-                .put("http://localhost:8082/api/v1/pets/{id}", petId)
+                .put(petEndpoint.endpointUpdate, petId)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(requestBody);
         return restTemplate
@@ -50,7 +52,7 @@ public class PetRestService {
 
     public ResponseEntity<?> delete(Long petId) {
         RequestEntity<Void> request = RequestEntity
-                .delete("http://localhost:8082/api/v1/pets/{id}", petId)
+                .delete(petEndpoint.endpointDelete, petId)
                 .build();
         return restTemplate
                 .exchange(request, ResponseEntity.class)

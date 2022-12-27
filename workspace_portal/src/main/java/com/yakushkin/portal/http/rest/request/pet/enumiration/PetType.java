@@ -1,4 +1,4 @@
-package com.yakushkin.portal.request.pet.enumiration;
+package com.yakushkin.portal.http.rest.request.pet.enumiration;
 
 public enum PetType {
 

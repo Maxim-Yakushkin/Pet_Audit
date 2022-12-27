@@ -1,7 +1,7 @@
-package com.yakushkin.portal.request.pet;
+package com.yakushkin.portal.http.rest.request.pet;
 
-import com.yakushkin.portal.request.pet.enumiration.AccommodationType;
-import com.yakushkin.portal.request.pet.enumiration.PetType;
+import com.yakushkin.portal.http.rest.request.pet.enumiration.AccommodationType;
+import com.yakushkin.portal.http.rest.request.pet.enumiration.PetType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
